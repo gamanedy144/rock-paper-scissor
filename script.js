@@ -110,20 +110,30 @@ function resetScore(){
     computerScore = 0;
     
 }
+function resetText(){
+    resultText.textContent = "";
+    resultChoices.textContent = "";
+    resultScore.textContent = "";
+    resultEnd.textContent = "";
+
+}
 const rockBTN = document.querySelector('#rock-button');
 rockBTN.addEventListener('click', ()=>{
+    resetText();
     updateResult('rock', computerPlay());
     checkWinner();
 });
 
 const paperBTN = document.querySelector('#paper-button');
 paperBTN.addEventListener('click', ()=>{
+    resetText();
     updateResult('paper', computerPlay());
     checkWinner();
 });
 
 const scissorsBTN = document.querySelector('#scissors-button');
 scissorsBTN.addEventListener('click', ()=>{
+    resetText();
     updateResult('scissors', computerPlay());
     checkWinner();
 });
@@ -131,8 +141,7 @@ scissorsBTN.addEventListener('click', ()=>{
 const resetBTN = document.querySelector('#reset-button');
 resetBTN.addEventListener('click', () =>{
     resetScore();
-    resultChoices.textContent ="";
-    resultEnd.textContent = "";
+    resetText();
     resultText.textContent = "Score was reset!";
     resultScore.textContent = "Score is now:  Player: 0 Computer: 0"
 })
