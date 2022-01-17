@@ -6,7 +6,7 @@ const resultEnd = document.querySelector('#result-end');
 let  playerScore = 0;
 let computerScore = 0;
 
-function computerPlay(){
+function computerPlay(){        //randomly chooses computer option
     let choice = Math.floor(Math.random()*3);
     switch(choice){
         case 0:
@@ -23,7 +23,7 @@ function computerPlay(){
     }
 }
 function playRound(playerSelection, computerSelection){
-    console.log(`${playerSelection} - ${computerSelection}`);
+    // console.log(`${playerSelection} - ${computerSelection}`);
     if(playerSelection === "rock"){
         if(computerSelection === "rock"){
             return 0;
@@ -91,6 +91,7 @@ function updateResult(playerChoice, computerChoice){
         resultScore.textContent = `Player: ${playerScore}   Computer: ${computerScore}`;
         resultContainer.appendChild(resultScore);
     }
+    resetBTN.classList.remove('hidden');
 }
 
 function checkWinner(){
@@ -144,6 +145,7 @@ resetBTN.addEventListener('click', () =>{
     resetText();
     resultText.textContent = "Score was reset!";
     resultScore.textContent = "Score is now:  Player: 0 Computer: 0"
+    resetBTN.classList.add('hidden');
 })
 
 

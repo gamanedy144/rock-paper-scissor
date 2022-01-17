@@ -6,22 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="font-family: sans-serif;">Welcome to Rock-Paper-Scissors Game!</h1>
-    <div id="results-container">
+    <div id="title">
+        <h1>Welcome to Rock-Paper-Scissors Game!</h1>
+    </div>
+   
+    <div id="content">
         <h2 style="font-family: sans-serif;">Choose what to play next!</h2>
+        
         <div id="buttons-container">
             <button id="rock-button">Rock</button>
             <button id="paper-button">Paper</button>
             <button id="scissors-button">Scissors</button>
         </div>
+    </div>
+        
+    <div id="results-container">
         <p id="result-choice"></p>
         <p id='result-text'></p>
         <p id="result-score"></p>
         <p id="result-end"></p>
     </div>
-    <button id="reset-button">Reset Score</button>
+    <div id="reset">
+        <button id="reset-button" class="hidden">Reset Score</button>
+    </div>
+    
 
 </body>
 </html>
